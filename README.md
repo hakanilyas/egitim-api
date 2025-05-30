@@ -138,7 +138,7 @@ GET /api/educations?page=1&per_page=10
 
 Proje ile birlikte test verileri gelir:
 - 8 kategori (Programming, Design, Marketing, vb.)
-- 31 etiket (PHP, Laravel, JavaScript, vb.)
+- 30 etiket (PHP, Laravel, JavaScript, vb.)
 - 10 örnek eğitim içeriği
 
 Test verilerini yüklemek için:
