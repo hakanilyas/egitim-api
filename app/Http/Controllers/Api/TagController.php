@@ -11,7 +11,7 @@ class TagController extends Controller
 {
     public function index()
     {
-        $tags = Tag::withCount('educations')->paginate(10);
+        $tags = Tag::withCount('educations')->get();
         return TagResource::collection($tags);
     }
 

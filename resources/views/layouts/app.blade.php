@@ -112,37 +112,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- App JavaScript -->
+    <script src="{{ asset('js/app.js') }}"></script>
     
-    <script>
-        // CSRF token setup for AJAX
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            }
-        });
-
-        // Alert helper function
-        function showAlert(message, type = 'success') {
-            const alert = `
-                <div class="alert alert-${type} alert-dismissible fade show" role="alert">
-                    ${message}
-                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                </div>
-            `;
-            $('#alert-container').html(alert);
-            
-            // Auto remove after 5 seconds
-            setTimeout(() => {
-                $('.alert').fadeOut();
-            }, 5000);
-        }
-
-        // API base URL
-        const API_BASE = '/api';
-    </script>
-
     @yield('scripts')
 </body>
 </html> 
