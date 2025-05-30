@@ -1,0 +1,367 @@
+{
+  "info": {
+    "name": "Eğitim API",
+    "description": "Laravel 12 ile geliştirilmiş eğitim yönetimi API'si",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8000/api",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "🧪 Test",
+      "item": [
+        {
+          "name": "API Test",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/test",
+              "host": ["{{base_url}}"],
+              "path": ["test"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "🎯 Eğitimler",
+      "item": [
+        {
+          "name": "Tüm Eğitimleri Listele",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/educations",
+              "host": ["{{base_url}}"],
+              "path": ["educations"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Yeni Eğitim Oluştur",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Vue.js ile Moderne Frontend\",\n  \"description\": \"Vue.js framework'ü ile modern web uygulamaları geliştirin\",\n  \"content_type\": \"video\",\n  \"start_date\": \"2025-07-01\",\n  \"category_id\": 1,\n  \"tag_ids\": [4, 11]\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/educations",
+              "host": ["{{base_url}}"],
+              "path": ["educations"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Belirli Eğitimi Göster",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/educations/1",
+              "host": ["{{base_url}}"],
+              "path": ["educations", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eğitimi Güncelle",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Laravel 12 ile Gelişmiş Web Geliştirme\",\n  \"description\": \"Laravel framework'ü ile profesyonel web uygulamaları geliştirin\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/educations/1",
+              "host": ["{{base_url}}"],
+              "path": ["educations", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eğitimi Sil",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/educations/1",
+              "host": ["{{base_url}}"],
+              "path": ["educations", "1"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "📂 Kategoriler",
+      "item": [
+        {
+          "name": "Tüm Kategorileri Listele",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/categories",
+              "host": ["{{base_url}}"],
+              "path": ["categories"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Yeni Kategori Oluştur",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Mobil Uygulama Geliştirme\",\n  \"description\": \"iOS ve Android uygulama geliştirme\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/categories",
+              "host": ["{{base_url}}"],
+              "path": ["categories"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Belirli Kategoriyi Göster",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/categories/1",
+              "host": ["{{base_url}}"],
+              "path": ["categories", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Kategoriyi Güncelle",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Web Programlama\",\n  \"description\": \"Frontend ve backend web geliştirme\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/categories/1",
+              "host": ["{{base_url}}"],
+              "path": ["categories", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Kategoriyi Sil",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/categories/1",
+              "host": ["{{base_url}}"],
+              "path": ["categories", "1"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "🏷️ Etiketler",
+      "item": [
+        {
+          "name": "Tüm Etiketleri Listele",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/tags",
+              "host": ["{{base_url}}"],
+              "path": ["tags"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Yeni Etiket Oluştur",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"TypeScript\",\n  \"description\": \"TypeScript programlama dili\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/tags",
+              "host": ["{{base_url}}"],
+              "path": ["tags"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Belirli Etiketi Göster",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/tags/1",
+              "host": ["{{base_url}}"],
+              "path": ["tags", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Etiketi Güncelle",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"PHP 8.2\",\n  \"description\": \"PHP 8.2 programlama dili\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/tags/1",
+              "host": ["{{base_url}}"],
+              "path": ["tags", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Etiketi Sil",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/tags/1",
+              "host": ["{{base_url}}"],
+              "path": ["tags", "1"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+} 
