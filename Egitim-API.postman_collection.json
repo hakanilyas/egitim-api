@@ -1,7 +1,7 @@
 {
   "info": {
     "name": "Eğitim API",
-    "description": "Laravel 12 ile geliştirilmiş eğitim yönetimi API'si",
+    "description": "Laravel 11 ile geliştirilmiş eğitim yönetimi API'si",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "variable": [
