@@ -33,7 +33,7 @@ Modern ve kapsamlı bir eğitim yönetim sistemi API'si. Laravel framework kulla
 
 1. **Projeyi klonlayın**
 ```bash
-git clone https://github.com/KullaniciAdiniz/egitim-api.git
+git clone https://github.com/hakanilyas/egitim-api.git
 cd egitim-api
 ```
 
@@ -180,6 +180,41 @@ php artisan make:seeder TableSeeder
 - Meta bilgiler (toplam sayfa, mevcut sayfa)
 - Performance optimizasyonu
 
+## 📂 Proje Dosya Yapısı
+
+```
+egitim-api/
+├── app/
+│   ├── Http/
+│   │   ├── Controllers/Api/
+│   │   │   ├── EducationController.php
+│   │   │   ├── CategoryController.php
+│   │   │   └── TagController.php
+│   │   └── Resources/
+│   │       ├── EducationResource.php
+│   │       ├── CategoryResource.php
+│   │       └── TagResource.php
+│   └── Models/
+│       ├── Education.php
+│       ├── Category.php
+│       └── Tag.php
+├── database/
+│   ├── migrations/
+│   └── seeders/
+├── resources/views/
+├── routes/api.php
+├── Egitim-API.postman_collection.json
+├── INSTALLATION.md
+└── dokumantasyon.txt
+```
+
+## 🔗 Faydalı Linkler
+
+- **Repository**: [https://github.com/hakanilyas/egitim-api](https://github.com/hakanilyas/egitim-api)
+- **Postman Collection**: [Egitim-API.postman_collection.json](./Egitim-API.postman_collection.json)
+- **Installation Guide**: [INSTALLATION.md](./INSTALLATION.md)
+- **Laravel Documentation**: [Laravel 11 Docs](https://laravel.com/docs/11.x)
+
 ## 🤝 Katkıda Bulunma
 
 1. Fork yapın
@@ -194,13 +229,12 @@ Bu proje MIT lisansı altında lisanslanmıştır.
 
 ## 👨‍💻 Geliştirici
 
-- **Adınız Soyadınız** - *Full Stack Developer*
+- **Hakan İlyas** - *Full Stack Developer*
 
 ## 📞 İletişim
 
-- Email: email@example.com
-- LinkedIn: [linkedin.com/in/profiliniz](https://linkedin.com/in/profiliniz)
-- GitHub: [github.com/kullaniciadi](https://github.com/kullaniciadi)
+- GitHub: [hakanilyas](https://github.com/hakanilyas)
+- Repository: [egitim-api](https://github.com/hakanilyas/egitim-api)
 
 ---
 
